@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Seznam>>
+	<Osoba id="1">
+		<Jmeno>Jan</Jmeno>
+		<Prijmeni>Novák</Prijmeni>
+		<Vek>25</Vek>
+	</Osoba>
+	<Manager id="2">
+		<Jmeno>Pavel</Jmeno>
+		<Prijmeni>Kral</Prijmeni>
+		<Vek>35</Vek>
+		<Mesto>Brno</Mesto>
+	</Manager>
+</Seznam>

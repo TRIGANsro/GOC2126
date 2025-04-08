@@ -1,0 +1,6 @@
+@WebSimulator_HostAddress = http://localhost:5181
+
+GET {{WebSimulator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

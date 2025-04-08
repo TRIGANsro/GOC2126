@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BigFaktorial": {
+      "commandName": "Project",
+      "commandLineArgs": "100"
+    }
+  }
+}

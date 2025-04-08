@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyGenerator", "NotifyGenerator\NotifyGenerator.csproj", "{103659C8-EF5D-43E5-BE0F-BD5CD6C0CF8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyAttributes", "NotifyAttributes\NotifyAttributes.csproj", "{1055095C-80EC-415C-BC75-A3373081820C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokusnik", "Pokusnik\Pokusnik.csproj", "{B72D81E0-D399-4D66-91B9-0DCA934D734E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{103659C8-EF5D-43E5-BE0F-BD5CD6C0CF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103659C8-EF5D-43E5-BE0F-BD5CD6C0CF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103659C8-EF5D-43E5-BE0F-BD5CD6C0CF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103659C8-EF5D-43E5-BE0F-BD5CD6C0CF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1055095C-80EC-415C-BC75-A3373081820C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1055095C-80EC-415C-BC75-A3373081820C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1055095C-80EC-415C-BC75-A3373081820C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1055095C-80EC-415C-BC75-A3373081820C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72D81E0-D399-4D66-91B9-0DCA934D734E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72D81E0-D399-4D66-91B9-0DCA934D734E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72D81E0-D399-4D66-91B9-0DCA934D734E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72D81E0-D399-4D66-91B9-0DCA934D734E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

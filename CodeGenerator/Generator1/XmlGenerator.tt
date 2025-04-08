@@ -1,0 +1,34 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="System.Xml.XDocument" #>
+<#@ assembly name="System.Linq" #>
+<#@ assembly name="Microsoft.VisualStudio.Interop"#>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ output extension=".cs" #>
+
+<#
+// The Visual Studio host, to get the local file path.
+ EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
+                       .GetService(typeof(EnvDTE.DTE));
+
+ XDocument doc = XDocument.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "XmlData.xml"));
+ 
+
+ 
+#>
+  public partial class <#= doc.Root.Name #> {}
+<#
+ 
+ foreach (XElement element in doc.Root.Elements())
+ {
+#>
+  public partial class <#= element.Name #> {}
+<#
+ }
+#>
