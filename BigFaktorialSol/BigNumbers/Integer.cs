@@ -1,20 +1,22 @@
-﻿namespace BigNumbers
+﻿using System.Text;
+
+namespace BigNumbers
 {
     public class Integer : IComparable<Integer>, IComparable, IEquatable<Integer>
     {
-        private List<int> digits = new List<int>();
+        private List<sbyte> digits = new ();
         public Integer(string number)
         {
             foreach (var digit in number.Reverse())
             {
-                digits.Add(digit - '0');
+                digits.Add((sbyte)(digit - '0'));
             }
         }
         public Integer(long number)
         {
             while (number > 0)
             {
-                digits.Add((int)(number % 10));
+                digits.Add((sbyte)(number % 10));
                 number /= 10;
             }
         }
@@ -23,7 +25,7 @@
             digits.Capacity = capacity;
             while (number > 0)
             {
-                digits.Add((int)(number % 10));
+                digits.Add((sbyte)(number % 10));
                 number /= 10;
             }
         }
@@ -42,7 +44,7 @@
                 {
                     sum += other.digits[i];
                 }
-                result.digits.Add(sum % 10);
+                result.digits.Add((sbyte)(sum % 10));
                 carry = sum / 10;
             }
             return result;
@@ -71,16 +73,16 @@
                     }
                     if (i + j < result.digits.Count)
                     {
-                        result.digits[i + j] = product;
+                        result.digits[i + j] = (sbyte) product;
                     }
                     else
                     {
-                        result.digits.Add(product);
+                        result.digits.Add((sbyte)product);
                     }
                 }
                 if (carry > 0)
                 {
-                    result.digits.Add(carry);
+                    result.digits.Add((sbyte)carry);
                 }
             }
             return result;
@@ -223,7 +225,16 @@
 
         public override string ToString()
         {
-            return new string(digits.Select(d => (char)(d + '0')).Reverse().ToArray());
+            //return new string(digits.Select(d => (char)(d + '0')).Reverse().ToArray());
+
+            StringBuilder sb = new StringBuilder(digits.Count);
+
+            for (int i = digits.Count - 1; i >= 0; i--)
+            {
+                sb.Append((char)(digits[i] + '0'));
+            }
+
+            return sb.ToString();
         }
 
         

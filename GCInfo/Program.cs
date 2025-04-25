@@ -1,17 +1,17 @@
 ﻿using System.Buffers;
 
-var pocet = 1000000;
+var pocet = 1_000_000;
 
 for (int i = 0; i < pocet; i++)
 {
-    AkceAlfa();
+    AkceAlfa(1000);
 }
 
 PrintGCInfo();
 
 for (int i = 0; i < pocet; i++)
 {
-    AkceAlfa();
+    AkceAlfa(10000);
 }
 
 PrintGCInfo();
@@ -23,10 +23,10 @@ for (int i = 0; i < pocet; i++)
 
 PrintGCInfo();
 
-void AkceAlfa()
+void AkceAlfa(int pocet)
 {
-    int[] pole = new int[1000];
-    for (int i = 0; i < 1000; i++)
+    int[] pole = new int[pocet];
+    for (int i = 0; i < 100; i++)
     {
         pole[i] = i;
 
@@ -37,14 +37,14 @@ void AkceAlfa()
 
 void AkceBeta()
 {
-    int[] pole = ArrayPool<int>.Shared.Rent(1000);
-    for (int i = 0; i < 1000; i++)
+    int[] pole = ArrayPool<int>.Shared.Rent(30000);
+    for (int i = 0; i < 100; i++)
     {
         pole[i] = i;
 
     }
 
-    var sum = pole.Sum();
+    //var sum = pole.Sum();
     ArrayPool<int>.Shared.Return(pole);
 }
 

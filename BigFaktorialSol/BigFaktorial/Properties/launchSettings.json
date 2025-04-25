@@ -2,7 +2,7 @@
   "profiles": {
     "BigFaktorial": {
       "commandName": "Project",
-      "commandLineArgs": "100"
+      "commandLineArgs": "100000"
     }
   }
 }

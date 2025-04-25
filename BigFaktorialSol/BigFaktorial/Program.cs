@@ -13,7 +13,7 @@ namespace BigFaktorial
             }
 
             Integer fact = await Factorial(n,16);
-
+            Console.WriteLine("Jdu na vystup");
             Console.WriteLine(fact);
         }
 
@@ -38,7 +38,7 @@ namespace BigFaktorial
                 start = end + 1;
             }
             await Task.WhenAll(tasks);
-
+            Console.WriteLine("Jdu nasobit vysledky");
             int pocet = parts;
 
             while(pocet > 1)
@@ -55,7 +55,7 @@ namespace BigFaktorial
                 await Task.WhenAll(tasks2);
                 pocet = pocet / 2;
             }
-            
+            Console.WriteLine("Vysledek hotov");
 
             return partResult[0];//.Multiple(partResult[1]);
         }

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<classes>
+	<class name="Person">
+		<property name="FirstName" type="string" />
+		<property name="LastName" type="string" />
+		<property name="Age" type="int" />
+	</class>
+
+	<class name="Address">
+		<property name="Street" type="string" />
+		<property name="City" type="string" />
+		<property name="PostalCode" type="string" />
+	</class>
+</classes>

@@ -35,13 +35,13 @@ namespace TestCache
                     Console.WriteLine($"Data1: {data1}");
                     Console.WriteLine($"Data2: {data2}");
                     Console.WriteLine("Cekam 6 sekund");
-                    Thread.Sleep(6000);
+                    Thread.Sleep(50);
                     data1 = cache.Get("key1");
                     data2 = cache.Get("key2");
                     Console.WriteLine($"Data1: {data1}");
                     Console.WriteLine($"Data2: {data2}");
                     Console.WriteLine("Cekam 6 sekund");
-                    Thread.Sleep(6000);
+                    Thread.Sleep(50);
                     data1 = cache.Get("key1");
                     data2 = cache.Get("key2");
                     Console.WriteLine($"Data1: {data1}");
