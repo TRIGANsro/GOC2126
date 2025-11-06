@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optima", "Optima\Optima.csproj", "{837D9363-1A76-419A-B82C-FF3D06CC865C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparerFirst", "ComparerFirst\ComparerFirst.csproj", "{A5FE2C9E-810D-4D9F-B7EA-B20792FFE6B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareSecond", "CompareSecond\CompareSecond.csproj", "{08E82E06-A1EA-4B3A-904E-A557BE903C04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A5FE2C9E-810D-4D9F-B7EA-B20792FFE6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5FE2C9E-810D-4D9F-B7EA-B20792FFE6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5FE2C9E-810D-4D9F-B7EA-B20792FFE6B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E82E06-A1EA-4B3A-904E-A557BE903C04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E82E06-A1EA-4B3A-904E-A557BE903C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E82E06-A1EA-4B3A-904E-A557BE903C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E82E06-A1EA-4B3A-904E-A557BE903C04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
