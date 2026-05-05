@@ -7,8 +7,8 @@ namespace Rychlost;
 
 class Program
 {
-    private const int POCET = 100_000_000;
-    private const int HLEDEJ = 75_000_000;
+    private const int POCET = 1_000_000;
+    private const int HLEDEJ = 750_000;
 
     static void Main(string[] args)
     {
@@ -18,6 +18,29 @@ class Program
         HashSet<int> hashSet = new HashSet<int>(POCET);
         
         stopky.Start();
+        for (int i = 0; i < POCET; i++)
+        {
+            listInt.Add(i);
+        }
+        stopky.Stop();
+
+        WriteLine("Plneni List<int>:");
+        WriteLine(stopky.ElapsedTicks);
+
+        stopky.Restart();
+
+        for (int i = 0; i < POCET; i++)
+        {
+            hashSet.Add(i);
+        }
+        stopky.Stop();
+        WriteLine("Plneni HashSet<int>:");
+        WriteLine(stopky.ElapsedTicks);
+
+        listInt.Clear();
+        hashSet.Clear();
+
+        stopky.Restart();
         for (int i = 0; i < POCET; i++)
         {
             listInt.Add(i);
@@ -93,7 +116,7 @@ class Program
         Stopwatch stopky = new Stopwatch();
         int[] pole = new int[pocet];
 
-        Random random = new Random();
+        Random random = new Random(42);
 
         for (int i = 0; i < pocet; i++)
         {
