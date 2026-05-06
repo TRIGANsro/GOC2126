@@ -28,7 +28,17 @@
  foreach (XElement element in doc.Root.Elements())
  {
 #>
-  public partial class <#= element.Name #> {}
+  public partial class <#= element.Name #> 
+  {
+<#
+    foreach (XElement subElement in element.Elements())
+    {
+#>
+    public string <#= subElement.Name #> { get; set; }
+<#
+    }
+#>
+  }
 <#
  }
 #>

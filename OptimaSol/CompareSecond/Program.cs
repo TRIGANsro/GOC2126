@@ -17,6 +17,8 @@ class Program
 {
     static int Main(string[] args)
     {
+        Console.WriteLine(DateTime.Now);
+
         string pathA = args.Length > 0 ? args[0] : "A.txt";
         string pathB = args.Length > 1 ? args[1] : "B.txt";
         
@@ -110,6 +112,7 @@ class Program
                                 }
                             }
                         }
+
                         // else: vše shodné
                         i += vecSize;
                     }
@@ -133,13 +136,17 @@ class Program
 
                 System.Threading.Interlocked.Add(ref totalDiffs, localDiffs);
             }
+            catch (OperationCanceledException ex) when (ex.HResult == 12345)
+            {
+                
+            }
             finally
             {
                 ArrayPool<byte>.Shared.Return(bufA);
                 ArrayPool<byte>.Shared.Return(bufB);
             }
         });
-
+        Console.WriteLine(DateTime.Now);
         Console.WriteLine($"Hotovo. Celkový počet odlišných bajtů: {totalDiffs}");
         if (samples.Count > 0)
         {
